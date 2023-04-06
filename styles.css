@@ -1,0 +1,105 @@
+body {
+    font-family: NYTFranklin, Georgia, serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+svg {
+    display: block;
+    margin: auto;
+}
+.radio-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.radio-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    margin-right: 20px;
+}
+.radio-item input[type='radio'] {
+    position: absolute;
+    visibility: hidden;
+}
+.radio-item .radio-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #3b7ab8;
+    transform: translateY(-50%);
+}
+
+.radio-item input[type='radio']:checked ~ .radio-dot {
+    background-color: #3b7ab8;
+    box-shadow: 0 0 5px rgba(59, 122, 184, 0.3);
+}
+
+.radio-item input[type='radio']:checked ~ .radio-dot:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.radio-item input[type='radio']:focus ~ .radio-dot {
+    outline: none;
+    box-shadow: 0 0 5px rgba(59, 122, 184, 0.3);
+}
+
+#replayButton {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border: none;
+    color: #444;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#replayButton:hover {
+    background-color: #ddd;
+}
+
+#info {
+    width: 1000px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#info strong {
+    color: #333;
+    font-weight: bold;
+}
+
+#info span {
+    font-weight: bold;
+}
+
+.info-label {
+    font-weight: 600;
+    margin-right: 5px;
+}
